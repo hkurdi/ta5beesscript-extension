@@ -1,0 +1,14 @@
+{
+    "iconDefinitions": {
+      "ta5beesIcon": {
+        "iconPath": "./ta5bees-icon.svg"
+      }
+    },
+    "fileExtensions": {
+      "tb": "ta5beesIcon"
+    },
+    "languageIds": {
+      "ta5bees": "ta5beesIcon"
+    }
+  }
+  
