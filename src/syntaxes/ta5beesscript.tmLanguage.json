@@ -1,30 +1,39 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Ta5beesScript",
-    "scopeName": "source.ta5bees",
     "patterns": [
-        { "include": "#keywords" },
-        { "include": "#strings" },
-        { "include": "#comments" },
-        { "include": "#functions" },
-        { "include": "#variables" }
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#variables"
+        }
     ],
     "repository": {
         "keywords": {
             "patterns": [
                 {
-                    "name": "keyword.control.js",
+                    "name": "keyword.control.ta5bees",
                     "match": "\\b(khalli|thabit|arrifli|iza|willa|la|raje3li|hawel|law_sar_ma_sar|irmi|kammil|iksir|stanna|tazamonan)\\b"
                 }
             ]
         },
         "strings": {
-            "name": "string.quoted.double.js",
+            "name": "string.quoted.double.ta5bees",
             "begin": "\"",
             "end": "\"",
             "patterns": [
                 {
-                    "name": "constant.character.escape.js",
+                    "name": "constant.character.escape.ta5bees",
                     "match": "\\\\."
                 }
             ]
@@ -32,7 +41,7 @@
         "comments": {
             "patterns": [
                 {
-                    "name": "comment.line.double-slash.js",
+                    "name": "comment.line.double-slash.ta5bees",
                     "match": "//.*$"
                 }
             ]
@@ -40,24 +49,19 @@
         "functions": {
             "patterns": [
                 {
-                    "name": "entity.name.function.js",
-                    "match": "\\b(arrifli|tazamonan\\s+arrifli)\\s+([_$a-zA-Z][_$a-zA-Z0-9]*)\\s*\\("
+                    "name": "entity.name.function.ta5bees",
+                    "match": "\\b(arrifli)\\s+([_$a-zA-Z][_$a-zA-Z0-9]*)\\s*\\("
                 }
             ]
         },
         "variables": {
             "patterns": [
                 {
-
-                    "name": "storage.type.js",
-                    "match": "\\b(khalli|thabit)\\b"
-                },
-                {
-
-                    "name": "variable.other.readwrite.js",
-                    "match": "\\b([_$a-zA-Z][_$a-zA-Z0-9]*)\\b"
+                    "name": "variable.other.ta5bees",
+                    "match": "\\b(khalli|thabit)\\s+([_$a-zA-Z][_$a-zA-Z0-9]*)\\b"
                 }
             ]
         }
-    }
+    },
+    "scopeName": "source.ta5bees"
 }

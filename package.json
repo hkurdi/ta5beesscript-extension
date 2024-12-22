@@ -3,20 +3,20 @@
   "displayName": "Ta5beesScript",
   "description": "Ta5beesScript language support for Visual Studio Code",
   "version": "0.0.1",
-  "publisher": "whoishlk", 
+  "publisher": "whoishlk",
   "license": "MIT",
   "readme": "README.md",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/ta5bees-extension.git"
+    "url": "https://github.com/hkurdi/ta5beesscript-extension"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/ta5bees-extension/issues"
+    "url": "https://github.com/hkurdi/ta5beesscript-extension/issues"
   },
-  "homepage": "https://github.com/yourusername/ta5bees-extension#readme",
+  "homepage": "https://github.com/hkurdi/ta5beesscript-extension#readme",
   "engines": {
-    "vscode": "^1.96.0"
+    "vscode": "^1.83.1"
   },
   "categories": [
     "Programming Languages"
@@ -24,17 +24,13 @@
   "activationEvents": [
     "onLanguage:ta5beesscript"
   ],
+  "main": "./dist/extension.js",
   "contributes": {
     "languages": [
       {
         "id": "ta5beesscript",
-        "aliases": [
-          "Ta5beesScript",
-          "ta5beesscript"
-        ],
-        "extensions": [
-          ".ta5bees"
-        ],
+        "aliases": ["Ta5beesScript", "ta5beesscript"],
+        "extensions": [".ta5bees"],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -42,25 +38,19 @@
       {
         "language": "ta5beesscript",
         "scopeName": "source.ta5bees",
-        "path": "./syntaxes/ta5beesscript.tmLanguage.json"
+        "path": "./src/syntaxes/ta5beesscript.tmLanguage.json"
       }
     ],
-    "capabilities": {
-      "completionProvider": {
-        "resolveProvider": true,
-        "triggerCharacters": [
-          ".",
-          "("
-        ]
-      }
-    },
     "iconThemes": [
       {
         "id": "ta5bees-icons",
         "label": "Ta5bees Icons",
         "path": "./icons/ta5bees-icon-theme.json"
       }
-    ]
+    ],
+    "completionItemProvider": {
+      "triggerCharacters": [".", "("]
+    }
   },
   "scripts": {
     "build": "tsc",
@@ -73,8 +63,6 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/vscode": "^1.96.0",
-    "eslint": "^8.50.0",
-    "vsce": "^2.16.0"
+    "@types/vscode": "^1.83.1"
   }
 }
